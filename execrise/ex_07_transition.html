@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            color: white;
+        }
+
+        .box:hover {
+            width: 200px;
+            transition-property: width;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            background-color: yellow;
+        }
+
+        .ball:hover {
+            border-radius: 50%;
+            background-color: blue;
+            /* 모든 요소값을 2초에 걸쳐서 변화를 해주겠다 */
+            transition: all 2s;
+        }
+
+        .box2 {
+            animation-name: moveBox;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes moveBox {
+            from {
+                left: 0;
+                background-color: blue;
+            }
+
+            to {
+                left: 100;
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball"></div>
+    <div class="box">마우스를 올리면 길어져요</div>
+    <div class="box2"></div>
+</body>
+
+</html>

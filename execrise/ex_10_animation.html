@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            height: 104px;
+            border: 2px solid red;
+            position: relative;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: moveBox 2s ease-in-out infinite alternate;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item span {
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes moveBox {
+            from {
+                border-radius: 0;
+                left: 0;
+            }
+
+            to {
+                border-radius: 50%;
+                left: calc(100% - 100px);
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="item"><span>item</span></div>
+    </div>
+</body>
+
+</html>

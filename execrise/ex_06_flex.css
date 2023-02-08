@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 2px solid red;
+}
+
+.container{
+    border: 2px solid red;
+    background: pink;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div{
+    background: green;
+    border: 1px solid white;
+    color: aliceblue;
+}

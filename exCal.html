@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .score {
+            margin: 10px;
+
+        }
+
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head">산수 문제를 풀어 봅시다.</h1>
+    <p class="title">자동으로 문제가 만들어집니다. 답 입력 후 채점 버튼을 누르세요. 다시 버튼을 누르면 새로운 문제가 출력됩니다. 나누기 결과는 정수입니다.</p>
+    <hr>
+
+    <div class="list">
+        <span id="x"></span> <span id="op"></span> <span id="y"></span>
+        <input type="number" class="user"> <br>
+        <!-- <span id="x"></span> <span id="op"></span> <span id="y"></span>
+        <input type="number" class="user"> <br>
+        <span id="x"></span> <span id="op"></span> <span id="y"></span>
+        <input type="number" class="user"> <br>
+        <span id="x"></span> <span id="op"></span> <span id="y"></span>
+        <input type="number" class="user"><br> -->
+    </div>
+
+    <div class="result">
+        <button class="btn1">채첨</button>
+        <span class="score"> 0 </span>
+        <button class="btn2"> 다시 </button>
+    </div>
+
+    <script>
+
+        const list = document.querySelector(".list");
+        const btn1 = document.querySelector(".btn1");
+        const btn2 = document.querySelector(".btn2");
+        const size = 4;
+        const quizSet = [];
+        const userAnswer = [];
+        const opSet = ['+', '-', '*', '/'];
+
+        function createQuiz() {
+            return {
+                x: getNum(1, 20),
+                y: getNum(1, 20),
+                op: opSet[getNum(0, opSet.length - 1)]
+            }
+        }
+        list.appendChild(x) = getNum(1, 20);
+
+        createQuiz();
+
+        function getNum(a, b) {
+            return parseInt(Math.random() * (b - a + 1)) + a;
+        };
+
+
+
+
+    </script>
+</body>
+
+</html>

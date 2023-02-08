@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box1 {
+            width: 20%;
+            background-color: green;
+            color: white;
+            padding: 30px;
+        }
+
+        .box2 {
+            width: 80%;
+            background-color: orange;
+            padding: 30;
+        }
+
+        /* screen size min - width 600 작동한다 */
+        @media screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .box1 {
+                width: 100%;
+                background-color: blue;
+            }
+
+            .box2 {
+                width: 100%;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+    </div>
+</body>
+
+</html>

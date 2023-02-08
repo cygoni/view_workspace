@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Itim', cursive;
+        }
+
+        div {
+            background-color: hotpink;
+            font-size: 40px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+            height: 100vh;
+            grid-template:
+                "header header header header" 1fr
+                "nav main main main" 17fr
+                "footer footer footer footer" 2fr
+            ;
+            color: white;
+            grid-gap: 8px;
+        }
+
+        .header {
+            background-color: red;
+            grid-area: header;
+        }
+
+        .nav {
+            background-color: gray;
+            grid-area: nav;
+        }
+
+        .main {
+            background-color: aqua;
+            grid-area: main;
+        }
+
+        .footer {
+            background-color: blue;
+            grid-area: footer;
+        }
+
+        @media screen and (max-width: 600px) {
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Itim', cursive;
+                font-size: 300px;
+            }
+
+            div {
+                background-color: hotpink;
+                font-size: 40px;
+            }
+
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .grid {
+                display: grid;
+                height: 100vh;
+                grid-template:
+                    "header" 3fr
+                    "nav" 1fr
+                    "main" 5fr
+                    "footer" 2fr
+                ;
+                font-size: 300px;
+                color: white;
+                grid-gap: 8px;
+            }
+
+            .header {
+                background-color: red;
+                grid-area: header;
+            }
+
+            .nav {
+                background-color: gray;
+                grid-area: nav;
+            }
+
+            .main {
+                background-color: aqua;
+                grid-area: main;
+            }
+
+            .footer {
+                background-color: blue;
+                grid-area: footer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="header item ">header</div>
+        <div class="nav item">nav</div>
+        <div class="main item">main</div>
+        <div class="footer item">footer</div>
+    </div>
+</body>
+
+</html>

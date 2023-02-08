@@ -1,0 +1,56 @@
+h1{
+    background-color: yellow;
+}
+
+h2 {
+    color: red;
+}
+
+.coding{
+    color: green;
+}
+
+#coding{
+    color: yellow;
+}
+
+footer{
+    color: green;
+}
+
+footer h3 {
+    color: black;
+}
+
+header {
+    color: violet;
+}
+
+header h3 {
+    color: blue;
+}
+
+/* 블럭 요소 : 박스 사이즈 : content-box: box 사이즈 content를 기반 고정
+padding 늘리면 content 자체 늘어나게 된다 => 사이즈 자체가 커짐
+
+box - sizing : border-box변경하면 우리가 처음 지정한
+사이즈 크기가 고정된다*/
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px dotted blue;
+    padding: 10px;
+    background-color: pink
+}
+
+.box1 {
+    box-sizing: content-box;
+    background-color: blueviolet;
+    padding: 20px;
+}
+
+.box3 {
+    box-sizing: border-box;
+    background-color: coral;
+    
+}

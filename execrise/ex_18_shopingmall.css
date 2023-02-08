@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+
+div{
+    /* display: grid;
+    grid-template: "h1" 3fr "one" 1fr "two" 1fr "three" 1fr;   
+     */
+     background-color: yellow;
+}
+
+.intro{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    background-color: darkkhaki;
+    display: grid;
+    grid-template: "one" 1fr "two" 1fr "three" 1fr;
+    
+}
+
+h1{
+    /*background-color: black;
+     grid-area: h1; */
+}
+
+
+
+.one {
+    background-color: red;
+    grid-area: one;
+}
+
+.two{
+    background-color: aqua;
+    grid-area: two;
+}
+
+.three{
+    background-color: skyblue;
+    grid-area: three;
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .move {
+            width: 250px;
+            height: 250px;
+            background-color: yellow;
+
+        }
+
+        .btn {
+            width: 200px;
+            height: 50px;
+            color: blue;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box move"></div>
+    <h1 class="btn"> 네모 움직여 </h1>
+    <!-- 2번째 이벤트 처리하는 방법  -->
+    <!-- <button onclick="clicked()"> 확인 </button> -->
+
+    <div>
+        <button class="btn1">네모 키우기</button>
+        <button class="btn2">네모 움직이기</button>
+        <button class="btn3">네모 회전하기</button>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn');
+        btn.innerHTML = "클릭"; // html 요소 수정 
+        const box = document.querySelector('div'); // 현재 웹 문서에 첫번째 div 태그 객체를 가져온다 
+
+        box.addEventListener('mouseover', () => {
+            box.style.transform = 'translateX(400px)'  // transform : translateX(400px)
+            box.style.transition = 'transform 2s ease-in';
+            box.innerHTML = "네모 돌아와";
+        })
+        box.addEventListener('mouseout', () => {
+            box.style.transform = 'translateX(0px)'
+            box.style.transition = 'transform 2s ease-in';
+            box.innerHTML = "ㅇㅋ 네모 돌아감";
+        })
+
+        const btnSet = document.querySelectorAll('button'); // 배열
+        const btn1 = btnSet[0];
+        const btn2 = btnSet[1];
+        const btn3 = btnSet[2];
+
+        console.log(btnSet);
+
+        btn1.addEventListener('click', () => {
+            box.style.height = '500px';
+            box.style.width = '500px';
+            box.innerHTML = "네모 커짐";
+        });
+
+        btn2.addEventListener('click', () => {
+            box.style.transform = 'translateX(200px)'
+            box.style.transition = 'transform 2s ease-in';
+            box.innerHTML = "네모 움직임";
+        })
+
+        btn3.addEventListener('click', () => {
+            box.style.transform = 'rotate(360deg) translateX(0)'
+            box.style.transition = 'transform 3s ease-in'
+            box.innerHTML = "회전 회오리~";
+        })
+
+        //console.log(box);
+        //console.log(btn);
+        //alert(`btn=${btn}`); // btn=[object HTMLHeadingElement]
+        //이벤트를 등록하는 첫번째 방법 : 고전 방법 같은 이벤트를 같은 객체에 중복해서 주지 못한다 
+        // function clicked(){
+        //     alert('클릭했다');
+        // }
+
+        // btn.onclick = function(){
+        //     alert('클릭했다');
+        //     box.style.backgroundColor="green";
+        // }
+        // btn.onmouseover = function(){
+        //     box.style.backgroundColor="pink";
+        // }
+        // btn.onmouseout =  function(){
+        //     box.style.backgroundColor="yellow";
+        // }
+
+        // box.onclick = function(){
+        //     box.style.backgroundColor="yellow";
+        // }
+
+        //이벤트 처리 3번째 방법 (한 이벤트 복수 처리 가능 )
+
+        btn.addEventListener('click', (event) => { alert(`event=${event}`) });
+        btn.addEventListener('click', (event) => { alert(`event.type=${event.type}`) });
+
+    </script>
+</body>
+
+</html>

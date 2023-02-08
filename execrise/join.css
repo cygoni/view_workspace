@@ -1,0 +1,104 @@
+/* 반복적으로 사용하는 특정값을 변수로 만들어서 사용할 수 있다. 
+전역 css 파일 내에서 모두 접근*/
+:root{
+    --main-color: #0068FF
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrap {
+    background: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    background-color: lightgray;
+    height: 60%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 7px 7px 39px 0 rgba(0, 104, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.content{
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.content_header{
+    font-size: 11px;
+    color: blue;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.content_body{
+    height: 80%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+.content_row{
+    width: 100%;
+    height: 100px;
+    margin: 1;
+}
+
+.content_title{
+    font-size: 0.7em;
+    color: black;
+    text-align: left;
+}
+
+input[type="text"]{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+input[type="text"]:hover{
+    border-bottom: 1px solid var(--main-color);
+}
+.gender{
+    height: 80px;
+}
+.content_row:last-child(){
+    height: 500px;
+}
+
+.content_footer{
+    width: 80%;
+    background-color: pink;
+}
+
+button{
+    height: 75px;
+    width: 100%;
+    display: block;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+span{
+    font-size: 8px;
+}
