@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>2048 project</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='2048.css'>
+    <script src='2048.js' defer></script>
+</head>
+
+<body>
+    <div class=backGround>
+        <div class="view">
+            <div class="top">
+                <div class="HScore">
+                    <p class="HScore_text">HIGH SCORE</p>
+                    <p class="HScore_main">0</p>
+                </div>
+                <div class="title">2048</div>
+                <div class="score">
+                    <p class="score_text">SCORE</p>
+                    <p class="score_main">0</p>
+                </div>
+            </div>
+            <div class="mid">
+                <table class="board">
+                    <tr class=board_cell>
+                        <td id="0-0"></td>
+                        <td id="0-1"></td>
+                        <td id="0-2"></td>
+                        <td id="0-3"></td>
+                    </tr>
+                    <tr class=board_cell>
+                        <td id="1-0"></td>
+                        <td id="1-1"></td>
+                        <td id="1-2"></td>
+                        <td id="1-3"></td>
+                    </tr>
+                    <tr class=board_cell>
+                        <td id="2-0"></td>
+                        <td id="2-1"></td>
+                        <td id="2-2"></td>
+                        <td id="2-3"></td>
+                    </tr>
+                    <tr class=board_cell>
+                        <td id="3-0"></td>
+                        <td id="3-1"></td>
+                        <td id="3-2"></td>
+                        <td id="3-3"></td>
+                    </tr>
+                </table>
+                <div class="overPage">
+                    <div class="overBack"></div>
+                    <div class="overBox">
+                        <div>
+                            <div class="overText">
+                                <h1 class="win">Game Clear</h1>
+                                <h1 class="lose">Game Over</h1>
+                            </div>
+                            <div class="overScore">
+                                <div class="overScore1">Score : </div>
+                                <div class="overScore2">0</div>
+                            </div>
+                        </div>
+                        <div class="retry"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

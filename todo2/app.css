@@ -21,6 +21,7 @@ header {
 }
 #list{
     width: 70%;
+    overflow-y: scroll;
 }
 
 .item {

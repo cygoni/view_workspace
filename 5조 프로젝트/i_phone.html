@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Main Screen</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='i_phone.css'>
+
+</head>
+
+<body>
+    <div class="out">
+        <div class="in">
+            <div class="top">
+                <div id="time"></div>
+            </div>
+            <div class="main">
+                <div class="mainIcon"></div>
+                <div class="appBox">
+                    <div class="app app_1"></div>
+                    <div class="app app_2"></div>
+                    <div class="app app_3"></div>
+                    <div class="app app_4"></div>
+                    <div class="app app_5"></div>
+                    <div class="app app_6"></div>
+                    <div class="app app_7"></div>
+                    <div class="app app_8"></div>
+                    <div class="app app_9"></div>
+                    <div class="app app_10"></div>
+                    <div class="app app_11"></div>
+                    <div class="app app_12"></div>
+                    <div class="app app_13"></div>
+                    <div class="app app_14"></div>
+                    <div class="app app_15"></div>
+                    <div class="app app_16"></div>
+                </div>
+                <div class="cover"></div>
+                <div class="gameScreen">
+                    <iframe src=""></iframe>
+                </div>
+
+            </div>
+            <div class="bot">
+                <div class="homeBtn"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let gameCount = 2   /*추가된 어플 총 갯수*/
+        window.onload = function () {
+            time();
+            setInterval(time, 20000);
+            mainIconClick();
+            homeBtnClick();
+            app_add(gameCount);
+        }
+
+        // UI 좌측상단 디지털시계
+        function time() {
+            let timeBox = document.querySelector("#time");
+            let date = new Date();
+            let hour = modifyNumber(date.getHours());
+            let min = modifyNumber(date.getMinutes());
+            timeBox.innerHTML = hour + " : " + min;
+        }
+        function modifyNumber(time) {
+            if (parseInt(time) < 10) {
+                return "0" + time;
+            }
+            else
+                return time;
+        }
+
+        let on = false;
+        function mainIconClick() {
+            let mainIcon = document.querySelector(".mainIcon");
+            let cover = document.querySelector(".cover");
+            let appBox = document.querySelector(".appBox");
+            mainIcon.addEventListener(('click'), () => {
+                if (!on) {
+                    appBox.classList.add("appBoxShow");
+                    cover.classList.add("covershow");
+                    appBox.style.scale = "1";
+                    cover.style.scale = "1";
+                    on = true;
+                }
+            })
+            cover.addEventListener(('click'), () => {
+                if (on) {
+                    appBox.classList.remove("appBoxShow");
+                    appBox.style.scale = "0";
+                    cover.style.scale = "0";
+                    on = false;
+                }
+            })
+        }
+
+        const iframe = document.querySelector("iframe");
+        const gameScreen = document.querySelector(".gameScreen");
+        const out = document.querySelector('.out');
+        let gameOn = false;
+
+        function homeBtnClick() {
+            let homeBtn = document.querySelector(".homeBtn");
+            homeBtn.addEventListener(('click'), () => {
+                location.reload();
+            })
+        }
+        let rotateScreen = 0;
+        function app_1() {
+            let app_1 = document.querySelector(".app_1");
+            app_1.addEventListener(('click'), () => {
+                gameScreen.classList.add("appBoxShow");
+                gameScreen.style.scale = "1";
+                iframe.src = "./2048/2048.html";
+                rotateScreen = 0;
+                gameOn = true;
+            })
+        }
+
+        function app_2() {
+            let app_2 = document.querySelector(".app_2");
+            app_2.addEventListener(('click'), () => {
+                gameScreen.classList.add("appBoxShow");
+                gameScreen.style.scale = "1";
+                gameScreen.style.width = "800";
+                gameScreen.style.height = "480";
+                gameScreen.style.width = "800";
+                gameScreen.style.height = "480";
+                gameScreen.style.transform = 'rotate(-90deg)';
+
+                iframe.style.position = "absolute";
+                iframe.style.width = "165%";
+                iframe.style.height = "60%";
+                iframe.style.left = "-158px";
+                iframe.style.top = "160px";
+                rotateScreen = 1;
+
+                out.style.transform = 'rotate(90deg)';
+                iframe.src = "./aexpocket/index.html ";
+                gameOn = true;
+            })
+        }
+
+        function app_3() {
+            let app_3 = document.querySelector(".app_3");
+            app_3.addEventListener(('click'), () => {
+                gameScreen.classList.add("appBoxShow");
+                gameScreen.style.scale = "1";
+                // iframe.src = "./ 폴더 / 파일.html ";
+                gameOn = true;
+            })
+        }
+
+        function app_add(Count) {
+            for (let i = 1; i <= Count; i++) {
+                let funcName = `app_${i}`;
+                if (typeof window[funcName] === "function") {
+                    window[funcName]();
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

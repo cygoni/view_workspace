@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #74C857;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hList{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.horse{
+    width: 20%;
+    height: 60%;
+    font-size: 60px;
+    font-weight: bold;
+    color: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+#h2{
+    color: red;
+}
+#h3{
+    color: yellow;
+}
+#h4{
+    color: lightgreen;
+}
+
+.horse img{
+    width: 100%;
+}
+
+.bet{
+    background-color: black;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 80px;
+    bottom: 80px;
+    left: 100px;
+    right: 100px;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+button{
+    width: 80px;
+    height: 40px;
+}
+
+.in{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 12%;
+}
+
+.number{
+    width: 30px;
+    font-size: 15px;
+    background: none;
+    
+}
+
+canvas{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+}
+
+.endPage {
+    background-color: brown;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 50px;
+    bottom: 50px;
+    left: 100px;
+    right: 100px;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+.rank{
+    padding: 20px;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: 60px;
+    color: white;
+}
+
+.rank img{
+    height: 80%;
+}
+
+.endMent{
+    width: 100%;
+    height: 20%;
+    background-color: yellow;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.endMent> button {
+    width: 10%;
+}

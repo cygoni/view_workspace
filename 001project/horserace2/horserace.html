@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="horserace.css">
+    <script defer src="horserace.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bet">
+            <div class="hList">
+                <div class="horse" id="h1">1번 <img src="doux1.png" alt=""></div>
+                <div class="horse" id="h2">2번 <img src="mort1.png" alt=""></div>
+                <div class="horse" id="h3">3번 <img src="tard1.png" alt=""></div>
+                <div class="horse" id="h4">4번 <img src="vita1.png" alt=""></div>
+            </div>
+            <div class="in">
+                <input type="number" id="horse">
+                <input type="number" id="money">
+            </div>
+            <button id="startBtn">GAME START</button>
+        </div>
+        <div class="endPage">
+            <div class="endMent">
+                <button class="reset">다시하기</button>
+            </div>
+            <div class="rank">Winner <img src="mort1.png" alt=""></div>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+
+</html>
